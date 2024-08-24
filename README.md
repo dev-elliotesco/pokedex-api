@@ -46,8 +46,11 @@ git clone https://github.com/dev-elliotesco/pokedex-api.git
 # Entra en el directorio del proyecto
 cd pokedex-api
 
+# Entra en el directorio deployment
+cd deployment
+
 # Ejecuta Docker Compose
-docker-compose up
+docker-compose up -d
 ```
 
 ## Autor
