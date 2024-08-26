@@ -1,7 +1,7 @@
 # Pokedex API
 
 ## Descripción
-Este es un servicio de Pokédex desarrollado con NestJS y TypeScript. Este microservicio se encarga de la gestión de Pokémon, incluyendo operaciones como la creación, actualización, eliminación y consulta de Pokémon.
+Este es un servicio de Pokédex desarrollado con NestJS y TypeScript. Este servicio se encarga de la gestión de Pokémon, incluyendo operaciones como la creación, actualización, eliminación y consulta de Pokémon.
 
 
 ## Requisitos & Tecnologías
@@ -12,7 +12,7 @@ Este es un servicio de Pokédex desarrollado con NestJS y TypeScript. Este micro
 - [Docker](https://www.docker.com/)
 
 ## Instalación
-Pasos para instalar las dependencias y el proyecto.
+Pasos para clonar el proyecto e instalar  las dependencias.
 
 ```bash
 # Clona este repositorio
@@ -33,25 +33,40 @@ npm run build
 
 
 ## Uso
-Pasos para ejecutar el proyecto.
 
-### Localmente:
+Pasos para ejecutar el proyecto:
 
-### Docker Compose:
+#### Localmente:
 
 ```bash
-# Clona este repositorio
-git clone https://github.com/dev-elliotesco/pokedex-api.git
+# Inicia el servidor
+npm run start:dev
+```
 
-# Entra en el directorio del proyecto
-cd pokedex-api
+#### Docker Compose:
 
+```bash
 # Entra en el directorio deployment
 cd deployment
 
 # Ejecuta Docker Compose
 docker-compose up -d
 ```
+
+Para cargar datos en la base de datos, puedes utilizar el siguiente endpoint:
+
+```
+GET /api/seed
+```
+Este endpoint permite cargar datos de Pokémon en la base de datos.
+
+Ejemplo de solicitud:
+
+```
+curl -X GET http://localhost:3000/api/seed
+```
+
+Este comando ```curl``` enviará una solicitud GET al endpoint para cargar los datos de Pokémon en la base de datos.
 
 ## Autor
 - Elliot Escovicth Riaño - [Github](https://github.com/dev-elliotesco)
