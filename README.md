@@ -5,7 +5,7 @@ Este es un servicio de Pokédex desarrollado con NestJS y TypeScript. Este servi
 
 
 ## Requisitos & Tecnologías
-- [Node.js](https://nodejs.org/) (versión 14 o superior)
+- [Node.js](https://nodejs.org/) (versión 18 o superior)
 - [NestJS](https://nestjs.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [MongoDB](https://www.mongodb.com/)
@@ -31,6 +31,11 @@ npm run build
 
 ## Configuración
 
+Antes de ejecutar el proyecto, debes configurar la URL de la base de datos MongoDB como una variable de entorno. Crea un archivo `.env` en la raíz del proyecto con el siguiente contenido:
+
+ `MONGO_DB = mongodb://localhost:27017/pokedex_db`
+
+Asegúrate de reemplazar mongodb://localhost:27017/pokedex_db con la URL de tu base de datos MongoDB.
 
 ## Uso
 
