@@ -31,11 +31,11 @@ npm run build
 
 ## Configuración
 
-Antes de ejecutar el proyecto, debes configurar la URL de la base de datos MongoDB como una variable de entorno. Crea un archivo `.env` en la raíz del proyecto con el siguiente contenido:
+Antes de ejecutar el proyecto, debes configurar la URL de la base de datos MongoDB, el nombre de la base de datos y el puerto como variables de entorno. Crea un archivo `.env` en la raíz del proyecto con el siguiente contenido:
 
- `MONGO_DB = mongodb://localhost:27017/pokedex_db`
-
-Asegúrate de reemplazar mongodb://localhost:27017/pokedex_db con la URL de tu base de datos MongoDB.
+- `MONGO_DB`: La URL de tu base de datos. Por ejemplo, `mongodb://localhost:27017`.
+- `MONGO_DB_NAME`: El nombre de tu base de datos. Por ejemplo, `pokedex_db`.
+- `PORT`:  El puerto en el que se ejecutará el servidor. Por ejemplo, `3000`.
 
 ## Uso
 
