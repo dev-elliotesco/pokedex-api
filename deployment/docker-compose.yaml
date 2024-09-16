@@ -1,7 +1,6 @@
 version: '3'
 
 services:
-  
   mongo:
     image: mongo:5
     container_name: mongo
@@ -12,3 +11,18 @@ services:
       MONGODB_DATABASE: pokemon
     volumes:
       - ./mongo/:/data/db
+
+  pokedex-api:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile
+    container_name: pokedex-api
+    restart: always
+    ports:
+      - ${PORT}:${PORT}
+    environment:
+      MONGO_DB: ${MONGO_DB}
+      MONGO_DB_NAME: ${MONGO_DB_NAME}
+      PORT: ${PORT}
+    depends_on:
+      - mongo
