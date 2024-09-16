@@ -11,7 +11,10 @@ import { EnvConfigurations } from './config/app.config';
     ConfigModule.forRoot({
       load: [EnvConfigurations]
     }),
-    MongooseModule.forRoot(process.env.MONGO_DB),
+    MongooseModule.forRoot(process.env.MONGO_DB,{
+        dbName: process.env.MONGO_DB_NAME,
+      }
+    ),
     PokemonModule,
     CommonModule,
     SeedModule]
