@@ -55,7 +55,7 @@ npm run start:dev
 cd deployment
 
 # Ejecuta Docker Compose
-docker-compose up -d
+docker compose --env-file ../.env up
 ```
 
 Para cargar datos en la base de datos, puedes utilizar el siguiente endpoint:
